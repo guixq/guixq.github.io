@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>数据结构课设：多叉路口交通灯管理问题 - 阿强</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="读书破万卷，下笔如有神,题目描述通常，在十字交叉路口只需设红、绿两色的交通灯便可保持正常的交通秩序，而在多叉路口需设几种颜色的交通灯才能既使车辆相互之间不碰撞，又能达到车辆的最大流通。假设有一个如图(a)所示的五叉路口，其,"> 
+    <meta name="author" content="GXQ"> 
+    <link rel="alternative" href="atom.xml" title="阿强" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">阿强</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">数据结构课设：多叉路口交通灯管理问题</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">数据结构课设：多叉路口交通灯管理问题</h1>
+        <div class="stuff">
+            <span>十月 12, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>通常，在十字交叉路口只需设红、绿两色的交通灯便可保持正常的交通秩序，而在多叉路口需设几种颜色的交通灯才能既使车辆相互之间不碰撞，又能达到车辆的最大流通。假设有一个如图(a)所示的五叉路口，其中C和E为单行道。在路口有13条可行的通路，其中有的可以同时通行，如A→B和E→C，而有的不能同时通行，如E→B和A→D。那么，在路口应如何设置交通灯进行车辆的管理呢？<br><img src="https://img-blog.csdnimg.cn/2020021512131335.png" alt="在这里插入图片描述"></p>
+<h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><h6 id="顶点图解释："><a href="#顶点图解释：" class="headerlink" title="顶点图解释："></a>顶点图解释：</h6><ol>
+<li>圈XY代表从道路X驶向道路Y的通道。</li>
+<li>共有2×C（3，2）+4+3共13条通道。</li>
+<li>若两通道不能同时通行，则将两通道相连。<br><img src="https://img-blog.csdnimg.cn/2020021512155975.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNDUxNTI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ol>
+<h6 id="问题转化为图着色问题"><a href="#问题转化为图着色问题" class="headerlink" title="问题转化为图着色问题"></a>问题转化为图着色问题</h6><p>用最少的颜色对图着色&lt;=&gt;对尽可能多的点着以相同的颜色&lt;=&gt;让尽可能多的通道的车辆可以同时通行=&gt;车流量最大</p>
+<h6 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h6><p>按图里从左到右从上到下的顺序对13个顶点从0~12依次标号，然后按照两顶点之间有边相连值为1，无边相连值为0的规则，得到邻接矩阵，如下：<br>0 0 0 0 1 1 1 0 0 1 0 0 0<br>0 0 0 0 0 1 1 1 0 1 1 0 0<br>0 0 0 0 0 0 0 0 0 1 1 1 0<br>0 0 0 0 0 0 0 0 0 0 0 0 0<br>1 0 0 0 0 0 0 1 0 0 1 0 0<br>1 1 0 0 0 0 1 0 0 0 1 1 0<br>1 1 0 0 0 1 0 0 0 0 1 1 0<br>0 1 0 0 1 0 0 0 0 0 0 1 0<br>0 0 0 0 0 0 0 0 0 0 0 0 0<br>1 1 1 0 0 0 0 0 0 0 0 0 0<br>0 1 1 0 1 1 1 0 0 0 0 0 0<br>0 0 1 0 0 1 1 1 0 0 0 0 0<br>0 0 0 0 0 0 0 0 0 0 0 0 0</p>
+<h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h5 id="算法1：回溯法（深度优先搜索）"><a href="#算法1：回溯法（深度优先搜索）" class="headerlink" title="算法1：回溯法（深度优先搜索）"></a>算法1：回溯法（深度优先搜索）</h5><p>思路：</p>
+<ol>
+<li>假设符合题意的最小颜色数是m</li>
+<li>则每一个顶点可以涂m种颜色，共m^13种可能（包括合理和不合理的涂色方案）</li>
+<li>采用深度优先搜索算法，找到合理的涂色方案，如果找不到则增加最小颜色数继续查找</li>
+</ol>
+<p><strong><em>该算法一定得到最优解，但时间复杂度高。</em></strong></p>
+<h5 id="算法2：贪婪算法（Welch-Powell算法）"><a href="#算法2：贪婪算法（Welch-Powell算法）" class="headerlink" title="算法2：贪婪算法（Welch Powell算法）"></a>算法2：贪婪算法（Welch Powell算法）</h5><ol>
+<li>将顶点按度数由大到小排列</li>
+<li>对未涂色的度数最大的顶点涂色，并将与该顶点不相连且满足条件的其它顶点涂以相同的颜色</li>
+<li>检查是否存在未涂色的顶点，若有，换一种颜色，重复2），否则，结束算法</li>
+</ol>
+<p><strong><em>该算法是启发式算法，时间复杂度低，但不一定得到最优解。</em></strong></p>
+<h1 id="算法源码"><a href="#算法源码" class="headerlink" title="算法源码"></a>算法源码</h1><h3 id="算法1"><a href="#算法1" class="headerlink" title="算法1"></a>算法1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;颜色类 </span><br><span class="line">class Color &#123;</span><br><span class="line">	public:</span><br><span class="line">		Color(int n,int **a,int *x,int sum);</span><br><span class="line">		bool ifOk(int node);</span><br><span class="line">		void Dfs(int node);</span><br><span class="line">		int n;		&#x2F;&#x2F;顶点数</span><br><span class="line">		int m;		&#x2F;&#x2F;可用颜色数</span><br><span class="line">		int **a;	&#x2F;&#x2F;邻接矩阵</span><br><span class="line">		int *x;		&#x2F;&#x2F;解向量</span><br><span class="line">		int sum;	&#x2F;&#x2F;可着色方案数</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;构造函数 </span><br><span class="line">Color::Color(int n,int **a,int *x,int sum)&#123;</span><br><span class="line">	this-&gt;n&#x3D;n;</span><br><span class="line">	this-&gt;a&#x3D;a;</span><br><span class="line">	this-&gt;x&#x3D;x;</span><br><span class="line">	this-&gt;sum&#x3D;sum;		</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;判断顶点node是否可以涂色 </span><br><span class="line">bool Color::ifOk(int node) &#123;</span><br><span class="line">	for (int i &#x3D; 1; i &lt;&#x3D; n; i++) </span><br><span class="line">		if ((a[node-1][i-1] &#x3D;&#x3D; 1) &amp;&amp; x[node] &#x3D;&#x3D; x[i])</span><br><span class="line">			return false;</span><br><span class="line">	return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;深度优先搜索 </span><br><span class="line">void Color::Dfs(int node) &#123;</span><br><span class="line">	&#x2F;&#x2F;当访问到叶子结点，则找到一种可着色方案 sum++</span><br><span class="line">	if (node &gt; n) &#123;</span><br><span class="line">		sum++;</span><br><span class="line">		&#x2F;&#x2F;输出该涂色方案 </span><br><span class="line">		for (int i &#x3D; 1; i &lt;&#x3D; n; i++)</span><br><span class="line">			cout &lt;&lt; x[i] &lt;&lt; &quot; &quot;;</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;递归 </span><br><span class="line">	else &#123;</span><br><span class="line">		for (int i &#x3D; 1; i &lt;&#x3D; m; i++) &#123;</span><br><span class="line">			x[node] &#x3D; i;</span><br><span class="line">			if (ifOk(node))</span><br><span class="line">				Dfs(node + 1);</span><br><span class="line">			x[node] &#x3D; 0;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	&#x2F;&#x2F;初始化邻接矩阵 </span><br><span class="line">	int** graph&#x3D;new int*[13];</span><br><span class="line">	for(int i&#x3D;0;i&lt;13;i++)</span><br><span class="line">		graph[i]&#x3D;new int[13];</span><br><span class="line">	for (int i &#x3D; 0;i &lt; 13;i++)</span><br><span class="line">		for (int j &#x3D; 0;j &lt; 13;j++)</span><br><span class="line">			cin &gt;&gt; graph[i][j];</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;初始化解向量 </span><br><span class="line">	int* p&#x3D;new int[14];</span><br><span class="line">	for(int i&#x3D;0;i&lt;14;i++)</span><br><span class="line">		p[i]&#x3D;0;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;初始化颜色类 </span><br><span class="line">	Color color(13,graph,p,0);</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;涂色 </span><br><span class="line">	int k&#x3D;0;</span><br><span class="line">	while(true)&#123;</span><br><span class="line">		k++;</span><br><span class="line">		color.m&#x3D;k;</span><br><span class="line">		color.Dfs(1);</span><br><span class="line">		if(color.sum!&#x3D;0)</span><br><span class="line">			break;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;输出最小颜色数和涂色方案数 </span><br><span class="line">	cout&lt;&lt;&quot;最小颜色数m为：&quot;&lt;&lt;k&lt;&lt;endl; </span><br><span class="line">	cout&lt;&lt;&quot;可行的涂色方案数为：&quot;&lt;&lt;color.sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="算法2"><a href="#算法2" class="headerlink" title="算法2"></a>算法2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;queue&gt; </span><br><span class="line">using namespace std;</span><br><span class="line">struct Node &#123;</span><br><span class="line">	int index;</span><br><span class="line">	int degree;</span><br><span class="line">	int color;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;冒泡排序 </span><br><span class="line">void sort(Node* nodes) &#123;</span><br><span class="line">	for (int i &#x3D; 0;i &lt; 13;i++) &#123;</span><br><span class="line">		for (int j &#x3D; 12;j &gt; i;j--) &#123;</span><br><span class="line">			if (nodes[j].degree &gt; nodes[j - 1].degree) &#123;</span><br><span class="line">				int degree &#x3D; nodes[j - 1].degree;</span><br><span class="line">				int index &#x3D; nodes[j - 1].index;</span><br><span class="line">				nodes[j - 1].degree &#x3D; nodes[j].degree;</span><br><span class="line">				nodes[j - 1].index &#x3D; nodes[j].index;</span><br><span class="line">				nodes[j].degree &#x3D; degree;</span><br><span class="line">				nodes[j].index &#x3D; index;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;按度数递减顺序输出排序后的顶点 </span><br><span class="line">void output(Node* nodes)&#123;</span><br><span class="line">	queue&lt;int&gt; q0,q1,q2,q3,q4,q5;</span><br><span class="line">	queue&lt;int&gt; q[6]; </span><br><span class="line">	for(int i&#x3D;0;i&lt;13;i++)</span><br><span class="line">		q[nodes[i].degree].push(nodes[i].index);</span><br><span class="line">	for(int i&#x3D;5;i&gt;&#x3D;0;i--)&#123;</span><br><span class="line">		cout&lt;&lt;&quot;度数为&quot;&lt;&lt;i&lt;&lt;&quot;的顶点：&quot;;</span><br><span class="line">		if(q[i].empty())</span><br><span class="line">			cout&lt;&lt;&quot;无&quot;;</span><br><span class="line">		while(!q[i].empty())&#123;</span><br><span class="line">			int index&#x3D;q[i].front( );</span><br><span class="line">			cout&lt;&lt;index&lt;&lt;&quot; &quot;;</span><br><span class="line">			q[i].pop();</span><br><span class="line">			&#125; </span><br><span class="line">			cout&lt;&lt;endl;</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;判断顶点nodes[j]是否可以涂上颜色color </span><br><span class="line">bool ifOk(Node* nodes,int** graph,int color,int j)&#123;</span><br><span class="line">	if(nodes[j].color!&#x3D;0)</span><br><span class="line">		return false;</span><br><span class="line">	for(int i&#x3D;0;i&lt;13;i++)</span><br><span class="line">			if(graph[nodes[j].index][i]&#x3D;&#x3D;1)</span><br><span class="line">				for(int m&#x3D;0;m&lt;13;m++)</span><br><span class="line">					if(nodes[m].index&#x3D;&#x3D;i)</span><br><span class="line">						if(nodes[m].color&#x3D;&#x3D;color)</span><br><span class="line">							return false;</span><br><span class="line">	return true;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	&#x2F;&#x2F;初始化邻接矩阵 </span><br><span class="line">	int** graph&#x3D;new int*[13];</span><br><span class="line">	for(int i&#x3D;0;i&lt;13;i++)</span><br><span class="line">		graph[i]&#x3D;new int[13];</span><br><span class="line">	&#x2F;&#x2F;初始化顶点数组，记录13个顶点的索引、度数、颜色	</span><br><span class="line">	Node* nodes &#x3D; new Node[13];</span><br><span class="line">	for (int i &#x3D; 0;i &lt; 13;i++) &#123;</span><br><span class="line">		int degree &#x3D; 0;</span><br><span class="line">		for (int j &#x3D; 0;j &lt; 13;j++) &#123;</span><br><span class="line">			cin &gt;&gt; graph[i][j];</span><br><span class="line">			if (graph[i][j])</span><br><span class="line">				degree++;</span><br><span class="line">		&#125;</span><br><span class="line">		nodes[i].index &#x3D; i;</span><br><span class="line">		nodes[i].degree &#x3D; degree;</span><br><span class="line">		nodes[i].color &#x3D; 0;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;对顶点按度数递减排序 </span><br><span class="line">	sort(nodes);</span><br><span class="line">	&#x2F;&#x2F;输出排序后的结果 </span><br><span class="line">	cout&lt;&lt;&quot;按度数由大到小排序后的结果：&quot;; </span><br><span class="line">	for(int i&#x3D;0;i&lt;13;i++)&#123;</span><br><span class="line">		cout&lt;&lt;nodes[i].index&lt;&lt;&quot; &quot;;</span><br><span class="line">		if(i&#x3D;&#x3D;12)</span><br><span class="line">			cout&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	output(nodes);</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;对13个顶点采用贪婪算法进行迭代涂色 </span><br><span class="line">	int k &#x3D; 0;</span><br><span class="line">	while (true) &#123;</span><br><span class="line">		k++;</span><br><span class="line">		int i;</span><br><span class="line">		for (i &#x3D; 0;i &lt; 13;i++) </span><br><span class="line">			if (nodes[i].color &#x3D;&#x3D; 0) &#123;</span><br><span class="line">				nodes[i].color &#x3D; k;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		if (i &#x3D;&#x3D; 13)</span><br><span class="line">			break;</span><br><span class="line">			</span><br><span class="line">		for (int j &#x3D; 0;j &lt; 13;j++)</span><br><span class="line">			if (ifOk(nodes,graph,k,j))</span><br><span class="line">				nodes[j].color &#x3D; k;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;输出所需最小颜色数和一种涂色方案 </span><br><span class="line">	cout &lt;&lt;&quot;所需要的最小颜色数目：&quot;&lt;&lt;k-1&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;&quot;一种涂色方案为：&quot;&lt;&lt;endl;</span><br><span class="line">	for(int i&#x3D;1;i&lt;k;i++)&#123;</span><br><span class="line">		cout&lt;&lt;i&lt;&lt;&#39;:&#39;;</span><br><span class="line">		for(int j&#x3D;0;j&lt;13;j++)</span><br><span class="line">			if(nodes[j].color&#x3D;&#x3D;i)</span><br><span class="line">				cout&lt;&lt;nodes[j].index&lt;&lt;&#39; &#39;;</span><br><span class="line">		if(i&lt;k-1)</span><br><span class="line">			cout&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="谢谢阅读，如果有用可否点个赞O-∩-∩-O"><a href="#谢谢阅读，如果有用可否点个赞O-∩-∩-O" class="headerlink" title="谢谢阅读，如果有用可否点个赞O(∩_∩)O"></a>谢谢阅读，如果有用可否点个赞O(∩_∩)O</h4>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="http://music.163.com/song/media/outer/url?id=1442466164.mp3">
+            </audio>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
