@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="足迹">
+    <meta name="keywords" content="阿强">
     <meta name="description" content="读书破万卷，下笔如有神">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -355,13 +355,6 @@
 
 <div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     
-        <div id="prev-cover" class="left waves-effect carousel-control">
-            <i class="icon fa fa-angle-left"></i>
-        </div>
-        <div id="next-cover" class="right waves-effect carousel-control">
-            <i class="icon fa fa-angle-right"></i>
-        </div>
-    
 
     <div class="carousel-item red white-text bg-cover about-cover">
         <div class="container">
@@ -370,7 +363,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                    subtitle
+                笔走乾坤
                 
             </div>
 
@@ -410,12 +403,12 @@
 
                 
                     <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github-alt"></i>Github
+                        <i class="fab fa-github "></i>Fork Me
                     </a>
                 
             </div>
             <div class="cover-social-link">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/guixq" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
@@ -503,7 +496,7 @@
         coverSlider.carousel({
             duration: Number('120'),
             fullWidth: true,
-            indicators: 'true' === 'true',
+            indicators: 'false' === 'true',
             onCycleTo() {
                 if (!initUserPressedOrDraggedActive) {
                     // console.log('initUserPressedOrDraggedActive')
@@ -515,32 +508,11 @@
 
         let carouselIntervalId;
         
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
 
         function restartPlay() {
             
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
         };
 
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
         
     });
 </script>
@@ -682,16 +654,12 @@
 <style>
     .aplayer .aplayer-lrc p {
         
-        display: none;
-        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
         
         font-size: 15px;
         color: #42b983;
@@ -766,7 +734,7 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/guixq" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 

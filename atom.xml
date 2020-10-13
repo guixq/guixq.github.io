@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>阿强</title>
   
-  
+  <subtitle>笔走乾坤</subtitle>
   <link href="https://guixq.github.io/atom.xml" rel="self"/>
   
   <link href="https://guixq.github.io/"/>
