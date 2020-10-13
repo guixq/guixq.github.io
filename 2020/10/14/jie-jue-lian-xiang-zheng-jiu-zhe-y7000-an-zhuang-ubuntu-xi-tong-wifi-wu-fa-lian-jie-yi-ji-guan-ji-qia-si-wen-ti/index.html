@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据结构课设：多叉路口交通灯管理问题, 阿强">
+    <meta name="keywords" content="解决联想拯救者Y7000安装ubuntu系统wifi无法连接以及关机卡死问题, 阿强">
     <meta name="description" content="读书破万卷，下笔如有神">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据结构课设：多叉路口交通灯管理问题 | 笔走乾坤</title>
+    <title>解决联想拯救者Y7000安装ubuntu系统wifi无法连接以及关机卡死问题 | 笔走乾坤</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -250,12 +250,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据结构课设：多叉路口交通灯管理问题</h1>
+                    <h1 class="description center-align post-title">解决联想拯救者Y7000安装ubuntu系统wifi无法连接以及关机卡死问题</h1>
                 </div>
             </div>
         </div>
@@ -375,12 +375,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/algorithm/">
-                                <span class="chip bg-color">algorithm</span>
-                            </a>
-                        
-                            <a href="/tags/data-structure/">
-                                <span class="chip bg-color">data structure</span>
+                            <a href="/tags/tips/">
+                                <span class="chip bg-color">tips</span>
                             </a>
                         
                     </div>
@@ -391,8 +387,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/" class="post-category">
-                                专业课
+                            <a href="/categories/%E7%BD%91%E4%B8%8A%E5%86%B2%E6%B5%AA/" class="post-category">
+                                网上冲浪
                             </a>
                         
                     </div>
@@ -404,28 +400,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-12
+                    2020-10-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-13
+                    2020-10-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    669
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    2 分
                 </div>
                 
 
@@ -440,231 +436,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>通常，在十字交叉路口只需设红、绿两色的交通灯便可保持正常的交通秩序，而在多叉路口需设几种颜色的交通灯才能既使车辆相互之间不碰撞，又能达到车辆的最大流通。假设有一个如图(a)所示的五叉路口，其中C和E为单行道。在路口有13条可行的通路，其中有的可以同时通行，如A→B和E→C，而有的不能同时通行，如E→B和A→D。那么，在路口应如何设置交通灯进行车辆的管理呢？<br><img src="https://img-blog.csdnimg.cn/2020021512131335.png" alt="在这里插入图片描述"></p>
-<h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><h6 id="顶点图解释："><a href="#顶点图解释：" class="headerlink" title="顶点图解释："></a>顶点图解释：</h6><ol>
-<li>圈XY代表从道路X驶向道路Y的通道。</li>
-<li>共有2×C（3，2）+4+3共13条通道。</li>
-<li>若两通道不能同时通行，则将两通道相连。<br><img src="https://img-blog.csdnimg.cn/2020021512155975.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNDUxNTI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-</ol>
-<h6 id="问题转化为图着色问题"><a href="#问题转化为图着色问题" class="headerlink" title="问题转化为图着色问题"></a>问题转化为图着色问题</h6><p>用最少的颜色对图着色&lt;=&gt;对尽可能多的点着以相同的颜色&lt;=&gt;让尽可能多的通道的车辆可以同时通行=&gt;车流量最大</p>
-<h6 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h6><p>按图里从左到右从上到下的顺序对13个顶点从0~12依次标号，然后按照两顶点之间有边相连值为1，无边相连值为0的规则，得到邻接矩阵，如下：<br>0 0 0 0 1 1 1 0 0 1 0 0 0<br>0 0 0 0 0 1 1 1 0 1 1 0 0<br>0 0 0 0 0 0 0 0 0 1 1 1 0<br>0 0 0 0 0 0 0 0 0 0 0 0 0<br>1 0 0 0 0 0 0 1 0 0 1 0 0<br>1 1 0 0 0 0 1 0 0 0 1 1 0<br>1 1 0 0 0 1 0 0 0 0 1 1 0<br>0 1 0 0 1 0 0 0 0 0 0 1 0<br>0 0 0 0 0 0 0 0 0 0 0 0 0<br>1 1 1 0 0 0 0 0 0 0 0 0 0<br>0 1 1 0 1 1 1 0 0 0 0 0 0<br>0 0 1 0 0 1 1 1 0 0 0 0 0<br>0 0 0 0 0 0 0 0 0 0 0 0 0</p>
-<h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h5 id="算法1：回溯法（深度优先搜索）"><a href="#算法1：回溯法（深度优先搜索）" class="headerlink" title="算法1：回溯法（深度优先搜索）"></a>算法1：回溯法（深度优先搜索）</h5><p>思路：</p>
-<ol>
-<li>假设符合题意的最小颜色数是m</li>
-<li>则每一个顶点可以涂m种颜色，共m^13种可能（包括合理和不合理的涂色方案）</li>
-<li>采用深度优先搜索算法，找到合理的涂色方案，如果找不到则增加最小颜色数继续查找</li>
-</ol>
-<p><strong><em>该算法一定得到最优解，但时间复杂度高。</em></strong></p>
-<h5 id="算法2：贪婪算法（Welch-Powell算法）"><a href="#算法2：贪婪算法（Welch-Powell算法）" class="headerlink" title="算法2：贪婪算法（Welch Powell算法）"></a>算法2：贪婪算法（Welch Powell算法）</h5><ol>
-<li>将顶点按度数由大到小排列</li>
-<li>对未涂色的度数最大的顶点涂色，并将与该顶点不相连且满足条件的其它顶点涂以相同的颜色</li>
-<li>检查是否存在未涂色的顶点，若有，换一种颜色，重复2），否则，结束算法</li>
-</ol>
-<p><strong><em>该算法是启发式算法，时间复杂度低，但不一定得到最优解。</em></strong></p>
-<h1 id="算法源码"><a href="#算法源码" class="headerlink" title="算法源码"></a>算法源码</h1><h3 id="算法1"><a href="#算法1" class="headerlink" title="算法1"></a>算法1</h3><pre><code>#include &lt;iostream&gt;
-using namespace std;
+                <h1 id="联想拯救者Y7000win10安装双系统ubuntu后爬坑记录"><a href="#联想拯救者Y7000win10安装双系统ubuntu后爬坑记录" class="headerlink" title="联想拯救者Y7000win10安装双系统ubuntu后爬坑记录"></a>联想拯救者Y7000win10安装双系统ubuntu后爬坑记录</h1><h5 id="具体ubuntu安装过程请参照其它教程，本文主要介绍解决wifi无法连接和关机卡死问题的方法"><a href="#具体ubuntu安装过程请参照其它教程，本文主要介绍解决wifi无法连接和关机卡死问题的方法" class="headerlink" title="具体ubuntu安装过程请参照其它教程，本文主要介绍解决wifi无法连接和关机卡死问题的方法"></a>具体ubuntu安装过程请参照其它教程，本文主要介绍解决wifi无法连接和关机卡死问题的方法</h5><h2 id="1、解决wifi无法连接问题："><a href="#1、解决wifi无法连接问题：" class="headerlink" title="1、解决wifi无法连接问题："></a>1、解决wifi无法连接问题：</h2><p>首先我们要明白问题所在，之所以wifi无法连接，是因为联想自己的驱动和ubuntu的驱动存在冲突。<br>在命令行中输入指令 <code>sudo rfkill list all </code>可以看到现在启动的驱动，其中ideapad版本是联想自带的驱动，它和ubuntu默认的驱动冲突,所以我们只要让ubuntu系统启动后不要启动ideapad这个驱动即可解决wifi无法连接的问题。</p>
+<p>所以在命令行中输入：<code>sudo modprobe -r ideapad_laptop</code>即可关闭该驱动，但由于该命令只在本次开机有效，所以每次开机都要重新输入一遍命令，很麻烦，所以可以考虑将该命令写入系统文件，使得每次开机系统自动执行该命令。<br>方法为：<br><strong>18.04版本之前</strong>的系统文件为rx.local<br>通过代码<code>sudo nano /etc/rx.local</code>打开文件，然后在文件结尾的exit 0上一行添加命令<br><code>echo "123" |sudo modprobe -r ideapad_laptop</code>保存退出即可。<br><strong>18.04版本</strong>ubuntu18.04不再使用 inited 管理系统，改用 systemd，已经没有了/etc/rx.local文件，如果还想要使用这种方法禁用ideapad驱动启动，可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41782149/article/details/89001226">https://blog.csdn.net/qq_41782149/article/details/89001226</a>这篇博客自己创建/etc/rx.local文件。<br>所以<strong>18.04版本更方便的一种解决方案</strong>是直接将ideapad该驱动模块列入黑名单来禁用该模块。具体方式如下：<br>1、 为你的个人黑名单创建一个文件：<code>sudo vim /etc/modprobe.d/myownblacklist.conf</code><br>2、 在该文件里添加ideapad模块名单：<code>ideapad_laptop</code><br>3、保存退出，重新启动，大功告成！<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/dccmmtop/p/7470087.html">这里是该方法的参考链接</a></p>
+<h2 id="2、解决关机卡死问题："><a href="#2、解决关机卡死问题：" class="headerlink" title="2、解决关机卡死问题："></a>2、解决关机卡死问题：</h2><p>OK，解决wifi无法连接后我们再解决关机卡死问题：<br>首先，关机卡死原因：ubuntu系统不支持你的显卡。<br>所以我们要下载驱动支持。<br>第一步：点击最左上角的活动按钮，搜索如图：<img src="https://img-blog.csdnimg.cn/20191130194841377.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNDUxNTI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">打开如图：<br><img src="https://img-blog.csdnimg.cn/20191130195019462.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNDUxNTI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>更改“下载自：”处的网址为阿里云的网址，然后点击关闭会出现如下提示：<br><img src="https://img-blog.csdnimg.cn/20191130210905717.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNDUxNTI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择重新载入，等待载入完毕之后再打开软件和更新，选择附加驱动——&gt;带有专有的NVIDIA驱动——&gt;应用更改——&gt;等待安装完成后即可解决关机卡死问题。<br>如图：<br><img src="https://img-blog.csdnimg.cn/2019113021111178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNDUxNTI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44585583/article/details/90704452">这里是该方法的参考链接</a></p>
 
-//颜色类 
-class Color {
-    public:
-        Color(int n,int **a,int *x,int sum);
-        bool ifOk(int node);
-        void Dfs(int node);
-        int n;        //顶点数
-        int m;        //可用颜色数
-        int **a;    //邻接矩阵
-        int *x;        //解向量
-        int sum;    //可着色方案数
-};
-
-//构造函数 
-Color::Color(int n,int **a,int *x,int sum){
-    this-&gt;n=n;
-    this-&gt;a=a;
-    this-&gt;x=x;
-    this-&gt;sum=sum;        
-}
-
-//判断顶点node是否可以涂色 
-bool Color::ifOk(int node) {
-    for (int i = 1; i &lt;= n; i++) 
-        if ((a[node-1][i-1] == 1) &amp;&amp; x[node] == x[i])
-            return false;
-    return true;
-}
-
-//深度优先搜索 
-void Color::Dfs(int node) {
-    //当访问到叶子结点，则找到一种可着色方案 sum++
-    if (node &gt; n) {
-        sum++;
-        //输出该涂色方案 
-        for (int i = 1; i &lt;= n; i++)
-            cout &lt;&lt; x[i] &lt;&lt; " ";
-        cout &lt;&lt; endl;
-    }
-    //递归 
-    else {
-        for (int i = 1; i &lt;= m; i++) {
-            x[node] = i;
-            if (ifOk(node))
-                Dfs(node + 1);
-            x[node] = 0;
-        }
-    }
-}
-
-int main() {
-    //初始化邻接矩阵 
-    int** graph=new int*[13];
-    for(int i=0;i&lt;13;i++)
-        graph[i]=new int[13];
-    for (int i = 0;i &lt; 13;i++)
-        for (int j = 0;j &lt; 13;j++)
-            cin &gt;&gt; graph[i][j];
-
-    //初始化解向量 
-    int* p=new int[14];
-    for(int i=0;i&lt;14;i++)
-        p[i]=0;
-
-    //初始化颜色类 
-    Color color(13,graph,p,0);
-
-    //涂色 
-    int k=0;
-    while(true){
-        k++;
-        color.m=k;
-        color.Dfs(1);
-        if(color.sum!=0)
-            break;
-    }
-
-    //输出最小颜色数和涂色方案数 
-    cout&lt;&lt;"最小颜色数m为："&lt;&lt;k&lt;&lt;endl; 
-    cout&lt;&lt;"可行的涂色方案数为："&lt;&lt;color.sum;
-}</code></pre>
-<h3 id="算法2"><a href="#算法2" class="headerlink" title="算法2"></a>算法2</h3><pre><code>#include &lt;iostream&gt;
-#include &lt;queue&gt; 
-using namespace std;
-struct Node {
-    int index;
-    int degree;
-    int color;
-};
-
-//冒泡排序 
-void sort(Node* nodes) {
-    for (int i = 0;i &lt; 13;i++) {
-        for (int j = 12;j &gt; i;j--) {
-            if (nodes[j].degree &gt; nodes[j - 1].degree) {
-                int degree = nodes[j - 1].degree;
-                int index = nodes[j - 1].index;
-                nodes[j - 1].degree = nodes[j].degree;
-                nodes[j - 1].index = nodes[j].index;
-                nodes[j].degree = degree;
-                nodes[j].index = index;
-            }
-
-        }
-    }
-}
-
-//按度数递减顺序输出排序后的顶点 
-void output(Node* nodes){
-    queue&lt;int&gt; q0,q1,q2,q3,q4,q5;
-    queue&lt;int&gt; q[6]; 
-    for(int i=0;i&lt;13;i++)
-        q[nodes[i].degree].push(nodes[i].index);
-    for(int i=5;i&gt;=0;i--){
-        cout&lt;&lt;"度数为"&lt;&lt;i&lt;&lt;"的顶点：";
-        if(q[i].empty())
-            cout&lt;&lt;"无";
-        while(!q[i].empty()){
-            int index=q[i].front( );
-            cout&lt;&lt;index&lt;&lt;" ";
-            q[i].pop();
-            } 
-            cout&lt;&lt;endl;
-        }
-}
-
-//判断顶点nodes[j]是否可以涂上颜色color 
-bool ifOk(Node* nodes,int** graph,int color,int j){
-    if(nodes[j].color!=0)
-        return false;
-    for(int i=0;i&lt;13;i++)
-            if(graph[nodes[j].index][i]==1)
-                for(int m=0;m&lt;13;m++)
-                    if(nodes[m].index==i)
-                        if(nodes[m].color==color)
-                            return false;
-    return true;
-} 
-
-int main() {
-    //初始化邻接矩阵 
-    int** graph=new int*[13];
-    for(int i=0;i&lt;13;i++)
-        graph[i]=new int[13];
-    //初始化顶点数组，记录13个顶点的索引、度数、颜色    
-    Node* nodes = new Node[13];
-    for (int i = 0;i &lt; 13;i++) {
-        int degree = 0;
-        for (int j = 0;j &lt; 13;j++) {
-            cin &gt;&gt; graph[i][j];
-            if (graph[i][j])
-                degree++;
-        }
-        nodes[i].index = i;
-        nodes[i].degree = degree;
-        nodes[i].color = 0;
-    }
-
-    //对顶点按度数递减排序 
-    sort(nodes);
-    //输出排序后的结果 
-    cout&lt;&lt;"按度数由大到小排序后的结果："; 
-    for(int i=0;i&lt;13;i++){
-        cout&lt;&lt;nodes[i].index&lt;&lt;" ";
-        if(i==12)
-            cout&lt;&lt;endl;
-    }
-    output(nodes);
-
-    //对13个顶点采用贪婪算法进行迭代涂色 
-    int k = 0;
-    while (true) {
-        k++;
-        int i;
-        for (i = 0;i &lt; 13;i++) 
-            if (nodes[i].color == 0) {
-                nodes[i].color = k;
-                break;
-            }
-
-        if (i == 13)
-            break;
-
-        for (int j = 0;j &lt; 13;j++)
-            if (ifOk(nodes,graph,k,j))
-                nodes[j].color = k;
-    }
-
-    //输出所需最小颜色数和一种涂色方案 
-    cout &lt;&lt;"所需要的最小颜色数目："&lt;&lt;k-1&lt;&lt;endl;
-    cout&lt;&lt;"一种涂色方案为："&lt;&lt;endl;
-    for(int i=1;i&lt;k;i++){
-        cout&lt;&lt;i&lt;&lt;':';
-        for(int j=0;j&lt;13;j++)
-            if(nodes[j].color==i)
-                cout&lt;&lt;nodes[j].index&lt;&lt;' ';
-        if(i&lt;k-1)
-            cout&lt;&lt;endl;
-    }
-}</code></pre>
-<h4 id="谢谢阅读，如果有用可否点个赞O-∩-∩-O"><a href="#谢谢阅读，如果有用可否点个赞O-∩-∩-O" class="headerlink" title="谢谢阅读，如果有用可否点个赞O(∩_∩)O"></a>谢谢阅读，如果有用可否点个赞O(∩_∩)O</h4>
             </div>
             <hr/>
 
@@ -689,7 +464,7 @@ int main() {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://guixq.github.io/2020/10/12/shu-ju-jie-gou-ke-she-duo-cha-lu-kou-jiao-tong-deng-guan-li-wen-ti/">https://guixq.github.io/2020/10/12/shu-ju-jie-gou-ke-she-duo-cha-lu-kou-jiao-tong-deng-guan-li-wen-ti/</a>
+                    <a href="https://guixq.github.io/2020/10/14/jie-jue-lian-xiang-zheng-jiu-zhe-y7000-an-zhuang-ubuntu-xi-tong-wifi-wu-fa-lian-jie-yi-ji-guan-ji-qia-si-wen-ti/">https://guixq.github.io/2020/10/14/jie-jue-lian-xiang-zheng-jiu-zhe-y7000-an-zhuang-ubuntu-xi-tong-wifi-wu-fa-lian-jie-yi-ji-guan-ji-qia-si-wen-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -727,12 +502,8 @@ int main() {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/algorithm/">
-                                    <span class="chip bg-color">algorithm</span>
-                                </a>
-                            
-                                <a href="/tags/data-structure/">
-                                    <span class="chip bg-color">data structure</span>
+                                <a href="/tags/tips/">
+                                    <span class="chip bg-color">tips</span>
                                 </a>
                             
                         </div>
@@ -1170,16 +941,17 @@ int main() {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/10/13/jie-jue-github-tu-pian-zi-yuan-wu-fa-fang-wen-de-wen-ti/">
+                <a href="/2020/10/14/jie-jue-lian-xiang-zheng-jiu-zhe-y7000-an-zhuang-ubuntu-xi-tong-wifi-wu-fa-lian-jie-yi-ji-guan-ji-qia-si-wen-ti/">
                     <div class="card-image">
                         
-                        <img src="/images/1.jpg" class="responsive-img" alt="解决Github图片资源无法访问的问题">
+                        <img src="/images/6.jpg" class="responsive-img" alt="解决联想拯救者Y7000安装ubuntu系统wifi无法连接以及关机卡死问题">
                         
-                        <span class="card-title">解决Github图片资源无法访问的问题</span>
+                        <span class="card-title">解决联想拯救者Y7000安装ubuntu系统wifi无法连接以及关机卡死问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1189,9 +961,9 @@ int main() {
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1204,6 +976,7 @@ int main() {
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1222,13 +995,12 @@ int main() {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/12/qian-hou-duan-fu-zhu-kai-fa-gong-ju-wang-zhan-ji-idea-kuai-jie-jian/">
+                <a href="/2020/10/14/er-fen-sou-suo-suan-fa-zhuan-zai-zi-zhi-hu-da-lao/">
                     <div class="card-image">
                         
+                        <img src="/images/5.jpg" class="responsive-img" alt="二分搜索算法（转载自知乎大佬）">
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="前后端辅助开发工具、网站及IDEA快捷键">
-                        
-                        <span class="card-title">前后端辅助开发工具、网站及IDEA快捷键</span>
+                        <span class="card-title">二分搜索算法（转载自知乎大佬）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1239,14 +1011,14 @@ int main() {
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                    后端
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1256,8 +1028,8 @@ int main() {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tips/">
-                        <span class="chip bg-color">tips</span>
+                    <a href="/tags/algorithm/">
+                        <span class="chip bg-color">algorithm</span>
                     </a>
                     
                 </div>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>阿强</title>
+  <title>笔走乾坤</title>
   
   <subtitle>笔走乾坤</subtitle>
   <link href="https://guixq.github.io/atom.xml" rel="self"/>
   
   <link href="https://guixq.github.io/"/>
-  <updated>2020-10-12T08:32:23.176Z</updated>
+  <updated>2020-10-13T16:09:52.862Z</updated>
   <id>https://guixq.github.io/</id>
   
   <author>
@@ -17,11 +17,86 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>解决联想拯救者Y7000安装ubuntu系统wifi无法连接以及关机卡死问题</title>
+    <link href="https://guixq.github.io/2020/10/14/jie-jue-lian-xiang-zheng-jiu-zhe-y7000-an-zhuang-ubuntu-xi-tong-wifi-wu-fa-lian-jie-yi-ji-guan-ji-qia-si-wen-ti/"/>
+    <id>https://guixq.github.io/2020/10/14/jie-jue-lian-xiang-zheng-jiu-zhe-y7000-an-zhuang-ubuntu-xi-tong-wifi-wu-fa-lian-jie-yi-ji-guan-ji-qia-si-wen-ti/</id>
+    <published>2020-10-13T16:08:10.000Z</published>
+    <updated>2020-10-13T16:09:52.862Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;联想拯救者Y7000win10安装双系统ubuntu后爬坑记录&quot;&gt;&lt;a href=&quot;#联想拯救者Y7000win10安装双系统ubuntu后爬坑记录&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网上冲浪" scheme="https://guixq.github.io/categories/%E7%BD%91%E4%B8%8A%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="tips" scheme="https://guixq.github.io/tags/tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二分搜索算法（转载自知乎大佬）</title>
+    <link href="https://guixq.github.io/2020/10/14/er-fen-sou-suo-suan-fa-zhuan-zai-zi-zhi-hu-da-lao/"/>
+    <id>https://guixq.github.io/2020/10/14/er-fen-sou-suo-suan-fa-zhuan-zai-zi-zhi-hu-da-lao/</id>
+    <published>2020-10-13T16:05:35.000Z</published>
+    <updated>2020-10-13T16:06:51.867Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;二分搜索算法及应用&quot;&gt;&lt;a href=&quot;#二分搜索算法及应用&quot; class=&quot;headerlink&quot; title=&quot;二分搜索算法及应用&quot;&gt;&lt;/a&gt;二分搜索算法及应用&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://guixq.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="algorithm" scheme="https://guixq.github.io/tags/algorithm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决Github图片资源无法访问的问题</title>
+    <link href="https://guixq.github.io/2020/10/13/jie-jue-github-tu-pian-zi-yuan-wu-fa-fang-wen-de-wen-ti/"/>
+    <id>https://guixq.github.io/2020/10/13/jie-jue-github-tu-pian-zi-yuan-wu-fa-fang-wen-de-wen-ti/</id>
+    <published>2020-10-13T15:51:02.000Z</published>
+    <updated>2020-10-13T16:07:03.545Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;修改C-Windows-System32-drivers-etc下的hosts文件&quot;&gt;&lt;a href=&quot;#修改C-Windows-System32-drivers-etc下的hosts文件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网上冲浪" scheme="https://guixq.github.io/categories/%E7%BD%91%E4%B8%8A%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="tips" scheme="https://guixq.github.io/tags/tips/"/>
+    
+  </entry>
+  
+  <entry>
     <title>数据结构课设：多叉路口交通灯管理问题</title>
     <link href="https://guixq.github.io/2020/10/12/shu-ju-jie-gou-ke-she-duo-cha-lu-kou-jiao-tong-deng-guan-li-wen-ti/"/>
     <id>https://guixq.github.io/2020/10/12/shu-ju-jie-gou-ke-she-duo-cha-lu-kou-jiao-tong-deng-guan-li-wen-ti/</id>
     <published>2020-10-12T08:17:06.000Z</published>
-    <updated>2020-10-12T08:32:23.176Z</updated>
+    <updated>2020-10-13T15:49:17.925Z</updated>
     
     
       
@@ -34,6 +109,12 @@
     
     
     
+    <category term="专业课" scheme="https://guixq.github.io/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/"/>
+    
+    
+    <category term="algorithm" scheme="https://guixq.github.io/tags/algorithm/"/>
+    
+    <category term="data structure" scheme="https://guixq.github.io/tags/data-structure/"/>
     
   </entry>
   
@@ -42,7 +123,7 @@
     <link href="https://guixq.github.io/2020/10/12/qian-hou-duan-fu-zhu-kai-fa-gong-ju-wang-zhan-ji-idea-kuai-jie-jian/"/>
     <id>https://guixq.github.io/2020/10/12/qian-hou-duan-fu-zhu-kai-fa-gong-ju-wang-zhan-ji-idea-kuai-jie-jian/</id>
     <published>2020-10-12T08:09:03.000Z</published>
-    <updated>2020-10-12T08:15:44.584Z</updated>
+    <updated>2020-10-13T16:03:05.861Z</updated>
     
     
       
@@ -56,6 +137,10 @@
     
     
     
+    <category term="后端" scheme="https://guixq.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="tips" scheme="https://guixq.github.io/tags/tips/"/>
     
   </entry>
   
