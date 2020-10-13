@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>阿强</title>
+  
+  
+  <link href="https://guixq.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://guixq.github.io/"/>
+  <updated>2020-10-12T08:32:23.176Z</updated>
+  <id>https://guixq.github.io/</id>
+  
+  <author>
+    <name>青衫读书人</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据结构课设：多叉路口交通灯管理问题</title>
+    <link href="https://guixq.github.io/2020/10/12/shu-ju-jie-gou-ke-she-duo-cha-lu-kou-jiao-tong-deng-guan-li-wen-ti/"/>
+    <id>https://guixq.github.io/2020/10/12/shu-ju-jie-gou-ke-she-duo-cha-lu-kou-jiao-tong-deng-guan-li-wen-ti/</id>
+    <published>2020-10-12T08:17:06.000Z</published>
+    <updated>2020-10-12T08:32:23.176Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前后端辅助开发工具、网站及IDEA快捷键</title>
+    <link href="https://guixq.github.io/2020/10/12/qian-hou-duan-fu-zhu-kai-fa-gong-ju-wang-zhan-ji-idea-kuai-jie-jian/"/>
+    <id>https://guixq.github.io/2020/10/12/qian-hou-duan-fu-zhu-kai-fa-gong-ju-wang-zhan-ji-idea-kuai-jie-jian/</id>
+    <published>2020-10-12T08:09:03.000Z</published>
+    <updated>2020-10-12T08:15:44.584Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前端：&quot;&gt;&lt;a href=&quot;#前端：&quot; class=&quot;headerlink&quot; title=&quot;前端：&quot;&gt;&lt;/a&gt;前端：&lt;/h1&gt;&lt;p&gt;一些辅助开发工具（下载链接挂到文末）：&lt;/p&gt;
+&lt;h2 id=&quot;1、尺子，可以测量出电脑任何位置的长宽：&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
