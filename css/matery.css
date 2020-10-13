@@ -586,11 +586,11 @@ header .go-back i {
 
 /* 滚动条 */
 ::-webkit-scrollbar-thumb {
-    background-color: #A175C1;
+    background-color: #8359A3;
     border-radius: 3em;
 }
 ::-webkit-scrollbar-track {
-    background-color: #8359A3;
+    background-color: #A175C1;
     border-radius: 3em;
 }
 ::-webkit-scrollbar {
