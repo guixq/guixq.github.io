@@ -451,9 +451,9 @@ git --version</code></pre>
 <h2 id="4、Github账号"><a href="#4、Github账号" class="headerlink" title="4、Github账号"></a>4、Github账号</h2><p>Github官网：<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></p>
 <h3 id="设置-user-name-和-user-email-可选"><a href="#设置-user-name-和-user-email-可选" class="headerlink" title="设置 user.name 和 user.email[可选]"></a>设置 user.name 和 user.email[可选]</h3><p>打开Git命令行</p>
 <p>在Git命令行设置user.name和user.email</p>
-<pre class=" language-shel"><code class="language-shel">git config --global user.name "your user-name"
+<pre class=" language-shell"><code class="language-shell">git config --global user.name "your user-name"
 git config --global user.email "your user-email"</code></pre>
-<h3 id="配置-SSH-密匙-可选"><a href="#配置-SSH-密匙-可选" class="headerlink" title="配置 SSH 密匙[可选]"></a>配置 SSH 密匙[可选]</h3><pre class=" language-shel"><code class="language-shel">ssh-keygen -t rsa -C user-email
+<h3 id="配置-SSH-密匙-可选"><a href="#配置-SSH-密匙-可选" class="headerlink" title="配置 SSH 密匙[可选]"></a>配置 SSH 密匙[可选]</h3><pre class=" language-shell"><code class="language-shell">ssh-keygen -t rsa -C user-email
 /root/.ssh/id_rsa</code></pre>
 <p>然后直接输入回车回车，这时进入到 <code>/root/.ssh/</code> 目录下查看 <code>id_rsa.pub</code> 文件</p>
 <p>复制文件里的所有内容 (所有内容, 一个字符都不要漏) . 然后到 Github 添加 ssh 密匙，点击 <code>New SSH key</code> 按钮进行添加</p>
