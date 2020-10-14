@@ -414,14 +414,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    637
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    6 分
                 </div>
                 
 
@@ -469,15 +469,15 @@ BINARYSEARCH(array，first，last，value){
 }</code></pre>
 <h3 id="二分搜索算法相关分析"><a href="#二分搜索算法相关分析" class="headerlink" title="二分搜索算法相关分析"></a>二分搜索算法相关分析</h3><h4 id="正确性证明"><a href="#正确性证明" class="headerlink" title="正确性证明"></a>正确性证明</h4><h5 id="1、为什么使用左闭右开的参数"><a href="#1、为什么使用左闭右开的参数" class="headerlink" title="1、为什么使用左闭右开的参数"></a>1、为什么使用左闭右开的参数</h5><p>一切始于图灵奖得主==Dijkstra==（据说他不用纸笔只花了二十分钟就发明了著名的==迪杰斯特拉算法==），其大致思路如下：</p>
 <p>假设有一个长度为4的数组,用整数边界的区间表示它的下标0,1,2,3,有四种写法:</p>
-<pre class=" language-c++"><code class="language-c++">a)    0≤i<4
-b)    -1<i≤3
+<pre><code>a)    0≤i&lt;4
+b)    -1&lt;i≤3
 c)    0≤i≤3
-d)    -1<i<4</code></pre>
+d)    -1&lt;i&lt;4</code></pre>
 <p>显然左边不闭的话-1 太丑了，所以只考虑a)和c)，然后怎么取舍呢?<br>现在假设该数组长度慢慢减小到0，右边界减小，此时它的index范围是空集$\emptyset$,整数边界的区<br>间的四种写法变成了:</p>
-<pre class=" language-c++"><code class="language-c++">a)    0≤i<0
-b)    -1<i≤-1
+<pre><code>a)    0≤i&lt;0
+b)    -1&lt;i≤-1
 c)    0≤i≤-1
-d)    -1<i<0</code></pre>
+d)    -1&lt;i&lt;0</code></pre>
 <p>现在只有a)不会出现负数了。看来左闭右开的a)是唯一种不反人类的写法!它还有一些个<br>好处:<br>1.区间两端值的差，如[0, 4) 中的4-0=4,正好是区间或数组的长度<br>2.刚好相邻的区间，如[0, 2)和[2, 4)，中间值(即2)相同,一眼就可以看出来</p>
 <h5 id="2、如何取中点"><a href="#2、如何取中点" class="headerlink" title="2、如何取中点"></a>2、如何取中点</h5><p>如果用<code>mid = (first + last)/2</code>计算中点，在C++、JAVA等语言里可能会出现溢出现象。</p>
 <p>解决方案就是将其改写成<code>mid = first + (last - first)/2</code>的写法，其中<code>lenth = last - first</code>为区间长度。</p>
@@ -1329,7 +1329,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.9k</span>&nbsp;字
+                class="white-color">5k</span>&nbsp;字
             
             
             
