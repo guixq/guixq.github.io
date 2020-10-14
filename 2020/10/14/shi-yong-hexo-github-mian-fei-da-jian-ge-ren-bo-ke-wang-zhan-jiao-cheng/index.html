@@ -461,10 +461,10 @@ git config --global user.email "your user-email"</code></pre>
 <h1 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h1><h2 id="1、新建仓库"><a href="#1、新建仓库" class="headerlink" title="1、新建仓库"></a>1、新建仓库</h2><p>在github新建一个仓库，仓库名为<code>&lt;user-name&gt;.github.io</code>格式，其中<code>&lt;user-name&gt;</code>是你Github的昵称。</p>
 <p>这样做，我们不需要服务器，github免费提供托管服务，我们也不需要购买域名，github同样提供了一个.io的域名。</p>
 <h2 id="2、全局安装hexo"><a href="#2、全局安装hexo" class="headerlink" title="2、全局安装hexo"></a>2、全局安装hexo</h2><pre class=" language-shell"><code class="language-shell">cnpm install -g hexo</code></pre>
-<h2 id="3、初始化项目"><a href="#3、初始化项目" class="headerlink" title="3、初始化项目"></a>3、初始化项目</h2><p>在磁盘里找个地方创建一个文件夹作为你的本地博客资源位置，这个文件夹就是你的项目根目录，然后在此处打开cmd命令行，运行如下命令，文件夹内就会出现hexo基础配置文件</p>
+<h2 id="3、初始化项目"><a href="#3、初始化项目" class="headerlink" title="3、初始化项目"></a>3、初始化项目</h2><p>在磁盘里找个地方创建一个文件夹作为你的本地博客资源位置，这个文件夹就是你的项目根目录，然后在此处打开git命令行，运行如下命令，文件夹内就会出现hexo基础配置文件</p>
 <pre class=" language-shell"><code class="language-shell">hexo init</code></pre>
 <h2 id="4、本地查看"><a href="#4、本地查看" class="headerlink" title="4、本地查看"></a>4、本地查看</h2><p>在项目根目录，运行如下命令，可以在本地网址<a target="_blank" rel="noopener" href="http://localhost:4000/%E8%AE%BF%E9%97%AE%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2">http://localhost:4000/访问你的博客</a></p>
-<pre class=" language-c++"><code class="language-c++">hexo s</code></pre>
+<pre class=" language-shell"><code class="language-shell">hexo s</code></pre>
 <h2 id="5、部署到github"><a href="#5、部署到github" class="headerlink" title="5、部署到github"></a>5、部署到github</h2><p>在项目根目录找到<code>_congif.yml</code>文件，找到<code>deploy</code>字段并填写完整，填写如下：</p>
 <pre class=" language-yml"><code class="language-yml"># Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -483,7 +483,7 @@ hexo deploy #简写hexo d</code></pre>
 <p>如果部署成功，那么就可以在<a target="_blank" rel="noopener" href="https://user-name.github.io/">https://user-name.github.io/</a> 查看效果了</p>
 <p>注：<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</code>为部署三件套，我们每次将本地博客内容推送到网络上都需要依次运行这三个命令。</p>
 <p>如果我们修改完本地配置想在本地先查看一下效果，则只需要运行<code>hexo s</code>命令即可。</p>
-<h1 id="主题优化"><a href="#主题优化" class="headerlink" title="主题优化"></a>主题优化</h1><p>不出意外的话，你会在<a target="_blank" rel="noopener" href="https://user-name.github.io/%E8%BF%99%E9%87%8C%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%95%88%E6%9E%9C%EF%BC%8C%E4%BD%86%E6%98%AF%E5%AE%83%E5%BE%88%E4%B8%91%E6%9C%89%E6%9C%A8%E6%9C%89%EF%BC%81%E6%89%80%E4%BB%A5%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E4%B8%B0%E5%AF%8C%E5%AE%83%EF%BC%81">https://user-name.github.io/这里看到你的博客的效果，但是它很丑有木有！所以我们需要丰富它！</a></p>
+<h1 id="主题优化"><a href="#主题优化" class="headerlink" title="主题优化"></a>主题优化</h1><p>不出意外的话，你会在<a target="_blank" rel="noopener" href="https://user-name.github.io/">https://user-name.github.io/</a> 这里看到你的博客的效果，但是它很丑有木有！所以我们需要丰富它！</p>
 <h2 id="hexo-theme-matery主题"><a href="#hexo-theme-matery主题" class="headerlink" title="hexo-theme-matery主题"></a>hexo-theme-matery主题</h2><p>目前网上有许多大佬写的优秀的主题，我们可以任选一个应用之，我用的是<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a>，所以我们以这个主题为例来讲解使用：</p>
 <p>具体基本配置请参考：</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md</a></p>
