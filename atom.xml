@@ -6,7 +6,7 @@
   <link href="https://guixq.github.io/atom.xml" rel="self"/>
   
   <link href="https://guixq.github.io/"/>
-  <updated>2020-10-14T03:19:10.751Z</updated>
+  <updated>2020-10-14T10:43:12.078Z</updated>
   <id>https://guixq.github.io/</id>
   
   <author>
@@ -17,9 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用hexo+github免费搭建个人博客网站教程</title>
+    <link href="https://guixq.github.io/2020/10/14/shi-yong-hexo-github-mian-fei-da-jian-ge-ren-bo-ke-wang-zhan-jiao-cheng/"/>
+    <id>https://guixq.github.io/2020/10/14/shi-yong-hexo-github-mian-fei-da-jian-ge-ren-bo-ke-wang-zhan-jiao-cheng/</id>
+    <published>2020-10-14T10:41:40.000Z</published>
+    <updated>2020-10-14T10:43:12.078Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;建前准备&quot;&gt;&lt;a href=&quot;#建前准备&quot; class=&quot;headerlink&quot; title=&quot;建前准备&quot;&gt;&lt;/a&gt;建前准备&lt;/h1&gt;&lt;h2 id=&quot;1、安装Node-js&quot;&gt;&lt;a href=&quot;#1、安装Node-js&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网上冲浪" scheme="https://guixq.github.io/categories/%E7%BD%91%E4%B8%8A%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="tips" scheme="https://guixq.github.io/tags/tips/"/>
+    
+  </entry>
+  
+  <entry>
     <title>期末考试回忆版链接</title>
-    <link href="https://guixq.github.io/2020/10/14/qi-mo-kao-shi-hui-yi-ban/"/>
-    <id>https://guixq.github.io/2020/10/14/qi-mo-kao-shi-hui-yi-ban/</id>
+    <link href="https://guixq.github.io/2020/10/14/qi-mo-kao-shi-hui-yi-ban-lian-jie/"/>
+    <id>https://guixq.github.io/2020/10/14/qi-mo-kao-shi-hui-yi-ban-lian-jie/</id>
     <published>2020-10-14T01:09:58.000Z</published>
     <updated>2020-10-14T03:19:10.751Z</updated>
     
@@ -123,7 +148,7 @@
     <link href="https://guixq.github.io/2020/10/12/shu-ju-jie-gou-ke-she-duo-cha-lu-kou-jiao-tong-deng-guan-li-wen-ti/"/>
     <id>https://guixq.github.io/2020/10/12/shu-ju-jie-gou-ke-she-duo-cha-lu-kou-jiao-tong-deng-guan-li-wen-ti/</id>
     <published>2020-10-12T08:17:06.000Z</published>
-    <updated>2020-10-14T03:19:57.654Z</updated>
+    <updated>2020-10-14T10:42:21.626Z</updated>
     
     
       

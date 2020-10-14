@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据结构课设：多叉路口交通灯管理问题, 阿强">
+    <meta name="keywords" content="使用hexo+github免费搭建个人博客网站教程, 阿强">
     <meta name="description" content="读书破万卷，下笔如有神">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据结构课设：多叉路口交通灯管理问题 | 笔记</title>
+    <title>使用hexo+github免费搭建个人博客网站教程 | 笔记</title>
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/guixq/guixq.github.io/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/guixq/guixq.github.io/libs/awesome/css/all.css">
@@ -250,12 +250,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据结构课设：多叉路口交通灯管理问题</h1>
+                    <h1 class="description center-align post-title">使用hexo+github免费搭建个人博客网站教程</h1>
                 </div>
             </div>
         </div>
@@ -375,12 +375,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/algorithm/">
-                                <span class="chip bg-color">algorithm</span>
-                            </a>
-                        
-                            <a href="/tags/data-structure/">
-                                <span class="chip bg-color">data structure</span>
+                            <a href="/tags/tips/">
+                                <span class="chip bg-color">tips</span>
                             </a>
                         
                     </div>
@@ -391,8 +387,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/" class="post-category">
-                                专业课
+                            <a href="/categories/%E7%BD%91%E4%B8%8A%E5%86%B2%E6%B5%AA/" class="post-category">
+                                网上冲浪
                             </a>
                         
                     </div>
@@ -404,7 +400,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-12
+                    2020-10-14
                 </div>
                 
 
@@ -418,14 +414,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    909
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    3 分
                 </div>
                 
 
@@ -440,231 +436,65 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>通常，在十字交叉路口只需设红、绿两色的交通灯便可保持正常的交通秩序，而在多叉路口需设几种颜色的交通灯才能既使车辆相互之间不碰撞，又能达到车辆的最大流通。假设有一个如图(a)所示的五叉路口，其中C和E为单行道。在路口有13条可行的通路，其中有的可以同时通行，如A→B和E→C，而有的不能同时通行，如E→B和A→D。那么，在路口应如何设置交通灯进行车辆的管理呢？<br><img src="https://img-blog.csdnimg.cn/2020021512131335.png" alt="在这里插入图片描述"></p>
-<h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><h6 id="顶点图解释："><a href="#顶点图解释：" class="headerlink" title="顶点图解释："></a>顶点图解释：</h6><ol>
-<li>圈XY代表从道路X驶向道路Y的通道。</li>
-<li>共有2×C（3，2）+4+3共13条通道。</li>
-<li>若两通道不能同时通行，则将两通道相连。<br><img src="https://img-blog.csdnimg.cn/2020021512155975.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNDUxNTI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-</ol>
-<h6 id="问题转化为图着色问题"><a href="#问题转化为图着色问题" class="headerlink" title="问题转化为图着色问题"></a>问题转化为图着色问题</h6><p>用最少的颜色对图着色&lt;=&gt;对尽可能多的点着以相同的颜色&lt;=&gt;让尽可能多的通道的车辆可以同时通行=&gt;车流量最大</p>
-<h6 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h6><p>按图里从左到右从上到下的顺序对13个顶点从0~12依次标号，然后按照两顶点之间有边相连值为1，无边相连值为0的规则，得到邻接矩阵，如下：<br>0 0 0 0 1 1 1 0 0 1 0 0 0<br>0 0 0 0 0 1 1 1 0 1 1 0 0<br>0 0 0 0 0 0 0 0 0 1 1 1 0<br>0 0 0 0 0 0 0 0 0 0 0 0 0<br>1 0 0 0 0 0 0 1 0 0 1 0 0<br>1 1 0 0 0 0 1 0 0 0 1 1 0<br>1 1 0 0 0 1 0 0 0 0 1 1 0<br>0 1 0 0 1 0 0 0 0 0 0 1 0<br>0 0 0 0 0 0 0 0 0 0 0 0 0<br>1 1 1 0 0 0 0 0 0 0 0 0 0<br>0 1 1 0 1 1 1 0 0 0 0 0 0<br>0 0 1 0 0 1 1 1 0 0 0 0 0<br>0 0 0 0 0 0 0 0 0 0 0 0 0</p>
-<h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h5 id="算法1：回溯法（深度优先搜索）"><a href="#算法1：回溯法（深度优先搜索）" class="headerlink" title="算法1：回溯法（深度优先搜索）"></a>算法1：回溯法（深度优先搜索）</h5><p>思路：</p>
-<ol>
-<li>假设符合题意的最小颜色数是m</li>
-<li>则每一个顶点可以涂m种颜色，共m^13种可能（包括合理和不合理的涂色方案）</li>
-<li>采用深度优先搜索算法，找到合理的涂色方案，如果找不到则增加最小颜色数继续查找</li>
-</ol>
-<p><strong><em>该算法一定得到最优解，但时间复杂度高。</em></strong></p>
-<h5 id="算法2：贪婪算法（Welch-Powell算法）"><a href="#算法2：贪婪算法（Welch-Powell算法）" class="headerlink" title="算法2：贪婪算法（Welch Powell算法）"></a>算法2：贪婪算法（Welch Powell算法）</h5><ol>
-<li>将顶点按度数由大到小排列</li>
-<li>对未涂色的度数最大的顶点涂色，并将与该顶点不相连且满足条件的其它顶点涂以相同的颜色</li>
-<li>检查是否存在未涂色的顶点，若有，换一种颜色，重复2），否则，结束算法</li>
-</ol>
-<p><strong><em>该算法是启发式算法，时间复杂度低，但不一定得到最优解。</em></strong></p>
-<h1 id="算法源码"><a href="#算法源码" class="headerlink" title="算法源码"></a>算法源码</h1><h3 id="算法1"><a href="#算法1" class="headerlink" title="算法1"></a>算法1</h3><pre><code>#include &lt;iostream&gt;
-using namespace std;
+                <h1 id="建前准备"><a href="#建前准备" class="headerlink" title="建前准备"></a>建前准备</h1><h2 id="1、安装Node-js"><a href="#1、安装Node-js" class="headerlink" title="1、安装Node.js"></a>1、<a target="_blank" rel="noopener" href="https://nodejs.org/en/">安装Node.js</a></h2><h2 id="2、安装Git"><a href="#2、安装Git" class="headerlink" title="2、安装Git"></a>2、<a target="_blank" rel="noopener" href="https://git-scm.com/">安装Git</a></h2><hr>
+<p>win+r输入cmd回车进入命令行：依次测试如下命令确定是否成功安装</p>
+<pre class=" language-shell"><code class="language-shell">node -v
+npm -v
+git --version</code></pre>
+<h2 id="3、安装cnpm"><a href="#3、安装cnpm" class="headerlink" title="3、安装cnpm"></a>3、安装cnpm</h2><blockquote>
+<p>npm下载速度太慢，所以我们用淘宝提供的国内镜像cnpm替代</p>
+</blockquote>
+<p>在命令行输入如下代码进行安装</p>
+<pre class=" language-shell"><code class="language-shell">npm install -g cnpm --registry=https://registry.npm.taobao.org</code></pre>
+<p>在命令行输入如下代码测试是否安装成功</p>
+<pre class=" language-shell"><code class="language-shell">cnpm -v</code></pre>
+<h2 id="4、Github账号"><a href="#4、Github账号" class="headerlink" title="4、Github账号"></a>4、Github账号</h2><p>Github官网：<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></p>
+<h3 id="设置-user-name-和-user-email-可选"><a href="#设置-user-name-和-user-email-可选" class="headerlink" title="设置 user.name 和 user.email[可选]"></a>设置 user.name 和 user.email[可选]</h3><p>打开Git命令行</p>
+<p>在Git命令行设置user.name和user.email</p>
+<pre class=" language-shel"><code class="language-shel">git config --global user.name "your user-name"
+git config --global user.email "your user-email"</code></pre>
+<h3 id="配置-SSH-密匙-可选"><a href="#配置-SSH-密匙-可选" class="headerlink" title="配置 SSH 密匙[可选]"></a>配置 SSH 密匙[可选]</h3><pre class=" language-shel"><code class="language-shel">ssh-keygen -t rsa -C user-email
+/root/.ssh/id_rsa</code></pre>
+<p>然后直接输入回车回车，这时进入到 <code>/root/.ssh/</code> 目录下查看 <code>id_rsa.pub</code> 文件</p>
+<p>复制文件里的所有内容 (所有内容, 一个字符都不要漏) . 然后到 Github 添加 ssh 密匙，点击 <code>New SSH key</code> 按钮进行添加</p>
+<p><img src="https://gitee.com/guixq/blogImage/raw/master/img/hg1.png" alt="1"></p>
+<h1 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h1><h2 id="1、新建仓库"><a href="#1、新建仓库" class="headerlink" title="1、新建仓库"></a>1、新建仓库</h2><p>在github新建一个仓库，仓库名为<code>&lt;user-name&gt;.github.io</code>格式，其中<code>&lt;user-name&gt;</code>是你Github的昵称。</p>
+<p>这样做，我们不需要服务器，github免费提供托管服务，我们也不需要购买域名，github同样提供了一个.io的域名。</p>
+<h2 id="2、全局安装hexo"><a href="#2、全局安装hexo" class="headerlink" title="2、全局安装hexo"></a>2、全局安装hexo</h2><pre class=" language-shell"><code class="language-shell">cnpm install -g hexo</code></pre>
+<h2 id="3、初始化项目"><a href="#3、初始化项目" class="headerlink" title="3、初始化项目"></a>3、初始化项目</h2><p>在磁盘里找个地方创建一个文件夹作为你的本地博客资源位置，这个文件夹就是你的项目根目录，然后在此处打开cmd命令行，运行如下命令，文件夹内就会出现hexo基础配置文件</p>
+<pre class=" language-shell"><code class="language-shell">hexo init</code></pre>
+<h2 id="4、本地查看"><a href="#4、本地查看" class="headerlink" title="4、本地查看"></a>4、本地查看</h2><p>在项目根目录，运行如下命令，可以在本地网址<a target="_blank" rel="noopener" href="http://localhost:4000/%E8%AE%BF%E9%97%AE%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2">http://localhost:4000/访问你的博客</a></p>
+<pre class=" language-c++"><code class="language-c++">hexo s</code></pre>
+<h2 id="5、部署到github"><a href="#5、部署到github" class="headerlink" title="5、部署到github"></a>5、部署到github</h2><p>在项目根目录找到<code>_congif.yml</code>文件，找到<code>deploy</code>字段并填写完整，填写如下：</p>
+<pre class=" language-yml"><code class="language-yml"># Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: <你的仓库地址> # https://github.com/user-name/user-name.github.io，注意把user-name换成你自己的用户名。
+  branch: master</code></pre>
+<p>[可选]如果前面配置了SSH，可以把repo字段这样写：</p>
+<pre class=" language-yaml"><code class="language-yaml">git@github.com<span class="token punctuation">:</span>user<span class="token punctuation">-</span>name/user<span class="token punctuation">-</span>name.github.io.git</code></pre>
+<p>这样做的好处是将本地项目部署到github时不用每次输入用户名和密码。</p>
+<p>[部署]</p>
+<p>在项目根目录依次运行如下代码：</p>
+<pre class=" language-shell"><code class="language-shell">hexo clean #简写hexo cl
+hexo g
+hexo deploy #简写hexo d</code></pre>
+<p>如果部署成功，那么就可以在<a target="_blank" rel="noopener" href="https://user-name.github.io/">https://user-name.github.io/</a> 查看效果了</p>
+<p>注：<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</code>为部署三件套，我们每次将本地博客内容推送到网络上都需要依次运行这三个命令。</p>
+<p>如果我们修改完本地配置想在本地先查看一下效果，则只需要运行<code>hexo s</code>命令即可。</p>
+<h1 id="主题优化"><a href="#主题优化" class="headerlink" title="主题优化"></a>主题优化</h1><p>不出意外的话，你会在<a target="_blank" rel="noopener" href="https://user-name.github.io/%E8%BF%99%E9%87%8C%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%95%88%E6%9E%9C%EF%BC%8C%E4%BD%86%E6%98%AF%E5%AE%83%E5%BE%88%E4%B8%91%E6%9C%89%E6%9C%A8%E6%9C%89%EF%BC%81%E6%89%80%E4%BB%A5%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E4%B8%B0%E5%AF%8C%E5%AE%83%EF%BC%81">https://user-name.github.io/这里看到你的博客的效果，但是它很丑有木有！所以我们需要丰富它！</a></p>
+<h2 id="hexo-theme-matery主题"><a href="#hexo-theme-matery主题" class="headerlink" title="hexo-theme-matery主题"></a>hexo-theme-matery主题</h2><p>目前网上有许多大佬写的优秀的主题，我们可以任选一个应用之，我用的是<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a>，所以我们以这个主题为例来讲解使用：</p>
+<p>具体基本配置请参考：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md</a></p>
+<p>其他一些个性化配置请参考：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/cungudafa/article/details/106278206?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160257766819725271706667%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=160257766819725271706667&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v2-1-106278206.first_rank_ecpm_v3_pc_rank_v2&amp;utm_term=hexo+matery+%E7%9A%84%E8%83%8C%E6%99%AF%E5%A3%81%E7%BA%B8&amp;spm=1018.2118.3001.4187">hexo（matery）背景、滚动条优化+增加点击跳评论</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43827595/article/details/104324443?biz_id=102&amp;utm_term=hexo%20matery%20%E4%BD%BF%E7%94%A8%E7%95%99%E8%A8%80%E6%9D%BF&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-104324443&amp;spm=1018.2118.3001.4187">hexo博客matery主题个性化配置</a></p>
+<p>……</p>
+<h1 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h1><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/390f202c5b0e">5分钟搞定个人博客-hexo</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wapchief/article/details/54602515?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160247930219195246641248%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=160247930219195246641248&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-1-54602515.first_rank_ecpm_v3_pc_rank_v2&amp;utm_term=hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2&amp;spm=1018.2118.3001.4187">使用hexo+github免费搭建个人博客网站超详细教程</a></p>
+<p>……</p>
 
-//颜色类 
-class Color {
-    public:
-        Color(int n,int **a,int *x,int sum);
-        bool ifOk(int node);
-        void Dfs(int node);
-        int n;        //顶点数
-        int m;        //可用颜色数
-        int **a;    //邻接矩阵
-        int *x;        //解向量
-        int sum;    //可着色方案数
-};
-
-//构造函数 
-Color::Color(int n,int **a,int *x,int sum){
-    this-&gt;n=n;
-    this-&gt;a=a;
-    this-&gt;x=x;
-    this-&gt;sum=sum;        
-}
-
-//判断顶点node是否可以涂色 
-bool Color::ifOk(int node) {
-    for (int i = 1; i &lt;= n; i++) 
-        if ((a[node-1][i-1] == 1) &amp;&amp; x[node] == x[i])
-            return false;
-    return true;
-}
-
-//深度优先搜索 
-void Color::Dfs(int node) {
-    //当访问到叶子结点，则找到一种可着色方案 sum++
-    if (node &gt; n) {
-        sum++;
-        //输出该涂色方案 
-        for (int i = 1; i &lt;= n; i++)
-            cout &lt;&lt; x[i] &lt;&lt; " ";
-        cout &lt;&lt; endl;
-    }
-    //递归 
-    else {
-        for (int i = 1; i &lt;= m; i++) {
-            x[node] = i;
-            if (ifOk(node))
-                Dfs(node + 1);
-            x[node] = 0;
-        }
-    }
-}
-
-int main() {
-    //初始化邻接矩阵 
-    int** graph=new int*[13];
-    for(int i=0;i&lt;13;i++)
-        graph[i]=new int[13];
-    for (int i = 0;i &lt; 13;i++)
-        for (int j = 0;j &lt; 13;j++)
-            cin &gt;&gt; graph[i][j];
-
-    //初始化解向量 
-    int* p=new int[14];
-    for(int i=0;i&lt;14;i++)
-        p[i]=0;
-
-    //初始化颜色类 
-    Color color(13,graph,p,0);
-
-    //涂色 
-    int k=0;
-    while(true){
-        k++;
-        color.m=k;
-        color.Dfs(1);
-        if(color.sum!=0)
-            break;
-    }
-
-    //输出最小颜色数和涂色方案数 
-    cout&lt;&lt;"最小颜色数m为："&lt;&lt;k&lt;&lt;endl; 
-    cout&lt;&lt;"可行的涂色方案数为："&lt;&lt;color.sum;
-}</code></pre>
-<h3 id="算法2"><a href="#算法2" class="headerlink" title="算法2"></a>算法2</h3><pre><code>#include &lt;iostream&gt;
-#include &lt;queue&gt; 
-using namespace std;
-struct Node {
-    int index;
-    int degree;
-    int color;
-};
-
-//冒泡排序 
-void sort(Node* nodes) {
-    for (int i = 0;i &lt; 13;i++) {
-        for (int j = 12;j &gt; i;j--) {
-            if (nodes[j].degree &gt; nodes[j - 1].degree) {
-                int degree = nodes[j - 1].degree;
-                int index = nodes[j - 1].index;
-                nodes[j - 1].degree = nodes[j].degree;
-                nodes[j - 1].index = nodes[j].index;
-                nodes[j].degree = degree;
-                nodes[j].index = index;
-            }
-
-        }
-    }
-}
-
-//按度数递减顺序输出排序后的顶点 
-void output(Node* nodes){
-    queue&lt;int&gt; q0,q1,q2,q3,q4,q5;
-    queue&lt;int&gt; q[6]; 
-    for(int i=0;i&lt;13;i++)
-        q[nodes[i].degree].push(nodes[i].index);
-    for(int i=5;i&gt;=0;i--){
-        cout&lt;&lt;"度数为"&lt;&lt;i&lt;&lt;"的顶点：";
-        if(q[i].empty())
-            cout&lt;&lt;"无";
-        while(!q[i].empty()){
-            int index=q[i].front( );
-            cout&lt;&lt;index&lt;&lt;" ";
-            q[i].pop();
-            } 
-            cout&lt;&lt;endl;
-        }
-}
-
-//判断顶点nodes[j]是否可以涂上颜色color 
-bool ifOk(Node* nodes,int** graph,int color,int j){
-    if(nodes[j].color!=0)
-        return false;
-    for(int i=0;i&lt;13;i++)
-            if(graph[nodes[j].index][i]==1)
-                for(int m=0;m&lt;13;m++)
-                    if(nodes[m].index==i)
-                        if(nodes[m].color==color)
-                            return false;
-    return true;
-} 
-
-int main() {
-    //初始化邻接矩阵 
-    int** graph=new int*[13];
-    for(int i=0;i&lt;13;i++)
-        graph[i]=new int[13];
-    //初始化顶点数组，记录13个顶点的索引、度数、颜色    
-    Node* nodes = new Node[13];
-    for (int i = 0;i &lt; 13;i++) {
-        int degree = 0;
-        for (int j = 0;j &lt; 13;j++) {
-            cin &gt;&gt; graph[i][j];
-            if (graph[i][j])
-                degree++;
-        }
-        nodes[i].index = i;
-        nodes[i].degree = degree;
-        nodes[i].color = 0;
-    }
-
-    //对顶点按度数递减排序 
-    sort(nodes);
-    //输出排序后的结果 
-    cout&lt;&lt;"按度数由大到小排序后的结果："; 
-    for(int i=0;i&lt;13;i++){
-        cout&lt;&lt;nodes[i].index&lt;&lt;" ";
-        if(i==12)
-            cout&lt;&lt;endl;
-    }
-    output(nodes);
-
-    //对13个顶点采用贪婪算法进行迭代涂色 
-    int k = 0;
-    while (true) {
-        k++;
-        int i;
-        for (i = 0;i &lt; 13;i++) 
-            if (nodes[i].color == 0) {
-                nodes[i].color = k;
-                break;
-            }
-
-        if (i == 13)
-            break;
-
-        for (int j = 0;j &lt; 13;j++)
-            if (ifOk(nodes,graph,k,j))
-                nodes[j].color = k;
-    }
-
-    //输出所需最小颜色数和一种涂色方案 
-    cout &lt;&lt;"所需要的最小颜色数目："&lt;&lt;k-1&lt;&lt;endl;
-    cout&lt;&lt;"一种涂色方案为："&lt;&lt;endl;
-    for(int i=1;i&lt;k;i++){
-        cout&lt;&lt;i&lt;&lt;':';
-        for(int j=0;j&lt;13;j++)
-            if(nodes[j].color==i)
-                cout&lt;&lt;nodes[j].index&lt;&lt;' ';
-        if(i&lt;k-1)
-            cout&lt;&lt;endl;
-    }
-}</code></pre>
-<h4 id="谢谢阅读，如果有用可否点个赞O-∩-∩-O"><a href="#谢谢阅读，如果有用可否点个赞O-∩-∩-O" class="headerlink" title="谢谢阅读，如果有用可否点个赞O(∩_∩)O"></a>谢谢阅读，如果有用可否点个赞O(∩_∩)O</h4>
             </div>
             <hr/>
 
@@ -689,7 +519,7 @@ int main() {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://guixq.github.io/2020/10/12/shu-ju-jie-gou-ke-she-duo-cha-lu-kou-jiao-tong-deng-guan-li-wen-ti/">https://guixq.github.io/2020/10/12/shu-ju-jie-gou-ke-she-duo-cha-lu-kou-jiao-tong-deng-guan-li-wen-ti/</a>
+                    <a href="https://guixq.github.io/2020/10/14/shi-yong-hexo-github-mian-fei-da-jian-ge-ren-bo-ke-wang-zhan-jiao-cheng/">https://guixq.github.io/2020/10/14/shi-yong-hexo-github-mian-fei-da-jian-ge-ren-bo-ke-wang-zhan-jiao-cheng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -727,12 +557,8 @@ int main() {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/algorithm/">
-                                    <span class="chip bg-color">algorithm</span>
-                                </a>
-                            
-                                <a href="/tags/data-structure/">
-                                    <span class="chip bg-color">data structure</span>
+                                <a href="/tags/tips/">
+                                    <span class="chip bg-color">tips</span>
                                 </a>
                             
                         </div>
@@ -1170,16 +996,17 @@ int main() {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/10/13/jie-jue-github-tu-pian-zi-yuan-wu-fa-fang-wen-de-wen-ti/">
+                <a href="/2020/10/14/shi-yong-hexo-github-mian-fei-da-jian-ge-ren-bo-ke-wang-zhan-jiao-cheng/">
                     <div class="card-image">
                         
-                        <img src="/images/1.jpg" class="responsive-img" alt="解决Github图片资源无法访问的问题">
+                        <img src="/images/0.jpg" class="responsive-img" alt="使用hexo+github免费搭建个人博客网站教程">
                         
-                        <span class="card-title">解决Github图片资源无法访问的问题</span>
+                        <span class="card-title">使用hexo+github免费搭建个人博客网站教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1189,9 +1016,9 @@ int main() {
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1204,6 +1031,7 @@ int main() {
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1222,12 +1050,12 @@ int main() {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/12/qian-hou-duan-fu-zhu-kai-fa-gong-ju-wang-zhan-ji-idea-kuai-jie-jian/">
+                <a href="/2020/10/14/qi-mo-kao-shi-hui-yi-ban-lian-jie/">
                     <div class="card-image">
                         
-                        <img src="/images/8.jpg" class="responsive-img" alt="前后端辅助开发工具、网站及IDEA快捷键">
+                        <img src="/images/12.jpg" class="responsive-img" alt="期末考试回忆版链接">
                         
-                        <span class="card-title">前后端辅助开发工具、网站及IDEA快捷键</span>
+                        <span class="card-title">期末考试回忆版链接</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1238,14 +1066,18 @@ int main() {
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                    后端
+                            <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="post-category">
+                                    转载
+                                </a>
+                            
+                            <a href="/categories/%E8%BD%AC%E8%BD%BD/%E4%B8%93%E4%B8%9A%E8%AF%BE/" class="post-category">
+                                    专业课
                                 </a>
                             
                             
